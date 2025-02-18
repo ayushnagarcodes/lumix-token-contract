@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
 
+// Author: @ayushnagarcodes
 contract LumixToken {
     address private _contractOwner;
     string private _name;
