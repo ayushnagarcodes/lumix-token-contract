@@ -71,8 +71,8 @@ contract LumixToken {
         _name = name_;
         _symbol = symbol_;
         _decimals = decimals_;
-        _totalSupply = initialSupply * (10 ** decimals_);
-        _cap = cap_ * (10 ** decimals_);
+        _totalSupply = initialSupply * (10 ** _decimals);
+        _cap = cap_ * (10 ** _decimals);
         _faucetAmount = faucetAmount_ * (10 ** _decimals);
         _paused = false;
         _balances[msg.sender] = _totalSupply;
