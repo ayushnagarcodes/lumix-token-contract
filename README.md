@@ -24,12 +24,14 @@ A feature-rich ERC20 token implementation built with Solidity, featuring mint/bu
 
 ### Token Information
 
+- `contractOwner()`: Get contract owner's address
 - `name()`: Get token name
 - `symbol()`: Get token symbol
 - `decimals()`: Get token decimals
 - `totalSupply()`: Get current total supply
 - `cap()`: Get maximum token cap
 - `faucetAmount()`: Get claimable faucet amount
+- `isPaused()`: Get contract's pause state
 - `balanceOf(address)`: Get account balance
 - `allowance(address, address)`: Get approved spending amount
 
@@ -44,6 +46,7 @@ A feature-rich ERC20 token implementation built with Solidity, featuring mint/bu
 
 ### Owner Operations
 
+- `transferOwnership(address)`: Transfer ownership
 - `mint(uint256)`: Create new tokens (within cap)
 - `burn(uint256)`: Destroy tokens
 - `pause()`: Pause all token operations
@@ -72,21 +75,6 @@ constructor(
     uint256 cap_,
     uint256 faucetAmount_
 )
-```
-
-Example deployment using Hardhat:
-
-```javascript
-const LumixToken = await ethers.getContractFactory("LumixToken");
-const token = await LumixToken.deploy(
-  "Lumix Token",
-  "LMX",
-  18,
-  10000, // 10k initial supply
-  100000, // 100k cap
-  10 // 10 tokens per faucet claim
-);
-await token.deployed();
 ```
 
 ### Interacting with the Contract
@@ -126,7 +114,7 @@ await token.claimFaucet();
 
 ```bash
 git clone https://github.com/ayushnagarcodes/lumix-token-contract.git
-cd lumix-token
+cd lumix-token-contract
 ```
 
 2. Install dependencies
