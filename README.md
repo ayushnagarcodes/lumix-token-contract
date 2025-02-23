@@ -2,6 +2,8 @@
 
 A feature-rich ERC20 token implementation built with Solidity, featuring mint/burn capabilities, faucet functionality, and comprehensive security controls.
 
+➡ View on [Etherscan](https://sepolia.etherscan.io/token/0x2e7cf6dcc96b5fcf187112a0214caac3c589e3df).
+
 ## Features
 
 - 🔒 Secure token implementation with pause mechanism
